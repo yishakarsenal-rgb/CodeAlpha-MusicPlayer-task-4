@@ -7,7 +7,7 @@ A responsive, minimalist dark-themed web music player built with HTML, CSS, and 
 # Features
 
 - Audio Controls: Full play, pause, next track, and previous track controls.
-- **Track Metadata:** Displays dynamic cover art, track titles, and artist details[cite: 2].
+- Track Metadata: Displays dynamic cover art, track titles, and artist details.
 - **Progress Bar & Timers:** Interactive progress bar with real-time audio time updates and duration formatting[cite: 2].
 - **Volume Control:** Real-time volume slider control[cite: 2].
 - **Interactive Playlist:** Categorized playlist supporting multiple genres (Acoustic, Electronic, Ambient) with track highlights[cite: 2].
