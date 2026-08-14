@@ -1,4 +1,4 @@
-# CodeAlpha_MusicPlayer - Interactive Web Music Player
+Yishak MusicPlayer - Interactive Web Music Player
 
 A responsive, minimalist dark-themed web music player built with HTML, CSS, and Vanilla JavaScript as part of the **CodeAlpha Frontend Development Internship**.
 
