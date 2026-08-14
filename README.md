@@ -12,7 +12,7 @@ A responsive, minimalist dark-themed web music player built with HTML, CSS, and 
 - Volume Control: Real-time volume slider control.
 - Interactive Playlist: Categorized playlist supporting multiple genres (Acoustic, Electronic, Ambient) with track highlights.
 - Local Audio Preloading: Preloaded local MP3 files stored in the `audio/` directory for instant, zero-lag playback.
-- **Minimalist Black Theme:** Sleek black-and-white user interface built with responsive CSS.
+- Minimalist Black Theme: Sleek black-and-white user interface built with responsive CSS.
 
 ---
 
