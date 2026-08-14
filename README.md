@@ -1,10 +1,10 @@
-Yishak MusicPlayer - Interactive Web Music Player
+# Yishak MusicPlayer - Interactive Web Music Player
 
-A responsive, minimalist dark-themed web music player built with HTML, CSS, and Vanilla JavaScript as part of the **CodeAlpha Frontend Development Internship**.
+A responsive, minimalist dark-themed web music player built with HTML, CSS, and Vanilla JavaScript as part of my **CodeAlpha Frontend Development Internship**.
 
 ---
 
-## 🚀 Features
+# Features
 
 - **Audio Controls:** Full play, pause, next track, and previous track controls[cite: 2].
 - **Track Metadata:** Displays dynamic cover art, track titles, and artist details[cite: 2].
