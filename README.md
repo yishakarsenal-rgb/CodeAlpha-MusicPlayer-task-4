@@ -20,7 +20,7 @@ A responsive, minimalist dark-themed web music player built with HTML, CSS, and 
 
 - HTML5: Markup structure and native audio API elements (`<audio>`)
 - CSS3: Custom styling, layout grid, and UI controls
-- **JavaScript (ES6+):** Audio playback logic, DOM updates, and event handling[cite: 2]
+- JavaScript (ES6+): Audio playback logic, DOM updates, and event handling
 
 ---
 
