@@ -24,7 +24,7 @@ A responsive, minimalist dark-themed web music player built with HTML, CSS, and 
 
 ---
 
-## 📂 Project Structure
+# Project Structure
 
 ```text
 CodeAlpha_MusicPlayer/
