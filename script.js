@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Optimized artwork URLs (300px compressed) and reliable audio streams
   const songs = [
-    // Acoustic & Chill
     {
       title: "Acoustic Morning",
       artist: "SoundHelix",
       category: "Acoustic",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
       cover:
-        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800",
+        "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=300&q=70",
     },
     {
       title: "Sunset Strings",
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Acoustic",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
       cover:
-        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800",
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=300&q=70",
     },
     {
       title: "Gentle Breeze",
@@ -23,16 +23,15 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Acoustic",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
       cover:
-        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&q=70",
     },
-
-    // Electronic & Synthwave
     {
       title: "Cyber Pulse",
       artist: "SoundHelix",
       category: "Electronic",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-      cover: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+      cover:
+        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=300&q=70",
     },
     {
       title: "Neon Drive",
@@ -40,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Electronic",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
       cover:
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=300&q=70",
     },
     {
       title: "Digital Horizon",
@@ -48,17 +47,15 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Electronic",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
       cover:
-        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800",
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=300&q=70",
     },
-
-    // Cinematic & Ambient
     {
       title: "Deep Ambient",
       artist: "SoundHelix",
       category: "Ambient",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
       cover:
-        "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800",
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=300&q=70",
     },
     {
       title: "Space Drift",
@@ -66,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Ambient",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
       cover:
-        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=300&q=70",
     },
     {
       title: "Atmospheric Echoes",
@@ -74,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Ambient",
       src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
       cover:
-        "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=800",
+        "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=300&q=70",
     },
   ];
 
@@ -94,6 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentSongIndex = 0;
   let isPlaying = false;
 
+  // Set audio preloading
+  audio.preload = "metadata";
+
   function loadSong(song) {
     trackTitle.textContent = song.title;
     trackArtist.textContent = song.artist;
@@ -104,13 +104,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function playSong() {
     isPlaying = true;
-    playBtn.innerHTML = "&#10074;&#10074;"; // Pause icon
-    audio.play();
+    playBtn.innerHTML = "&#10074;&#10074;";
+
+    // Smooth async play handling
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        console.warn("Playback interrupted or buffering:", error);
+      });
+    }
   }
 
   function pauseSong() {
     isPlaying = false;
-    playBtn.innerHTML = "&#9654;"; // Play icon
+    playBtn.innerHTML = "&#9654;";
     audio.pause();
   }
 
@@ -125,22 +132,23 @@ document.addEventListener("DOMContentLoaded", () => {
   prevBtn.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
     loadSong(songs[currentSongIndex]);
-    playSong();
+    if (isPlaying) playSong();
   });
 
   nextBtn.addEventListener("click", () => {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
     loadSong(songs[currentSongIndex]);
-    playSong();
+    if (isPlaying) playSong();
   });
 
-  // Time & Progress Formatting
   function formatTime(seconds) {
+    if (isNaN(seconds)) return "0:00";
     const mins = Math.floor(seconds / 60);
     const secs = Math.floor(seconds % 60);
     return `${mins}:${secs < 10 ? "0" : ""}${secs}`;
   }
 
+  // Smooth UI updates during playback
   audio.addEventListener("timeupdate", () => {
     if (audio.duration) {
       const progressPercent = (audio.currentTime / audio.duration) * 100;
@@ -151,20 +159,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   progressBar.addEventListener("input", () => {
-    const seekTime = (progressBar.value / 100) * audio.duration;
-    audio.currentTime = seekTime;
+    if (audio.duration) {
+      const seekTime = (progressBar.value / 100) * audio.duration;
+      audio.currentTime = seekTime;
+    }
   });
 
   volumeBar.addEventListener("input", (e) => {
     audio.volume = e.target.value / 100;
   });
 
-  // Playlist Rendering
   function renderPlaylist() {
     playlistEl.innerHTML = "";
     songs.forEach((song, index) => {
       const li = document.createElement("li");
-      li.innerHTML = `<span>${song.title}</span><small>${song.artist}</small>`;
+      li.innerHTML = `<span>${song.title}</span><small>${song.category}</small>`;
       li.addEventListener("click", () => {
         currentSongIndex = index;
         loadSong(songs[currentSongIndex]);
@@ -191,7 +200,6 @@ document.addEventListener("DOMContentLoaded", () => {
     playSong();
   });
 
-  // Initial Setup
   renderPlaylist();
   loadSong(songs[currentSongIndex]);
 });
