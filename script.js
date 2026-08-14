@@ -1,25 +1,80 @@
 document.addEventListener("DOMContentLoaded", () => {
   const songs = [
+    // Acoustic & Chill
     {
-      title: "Acoustic Breeze",
-      artist: "Benjamin Tissot",
-      src: "https://www.bensound.com/bensound-music/bensound-acousticbreeze.mp3",
+      title: "Acoustic Morning",
+      artist: "SoundHelix",
+      category: "Acoustic",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
       cover:
         "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800",
     },
     {
-      title: "Creative Minds",
-      artist: "Bensound",
-      src: "https://www.bensound.com/bensound-music/bensound-creativeminds.mp3",
+      title: "Sunset Strings",
+      artist: "SoundHelix",
+      category: "Acoustic",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
       cover:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800",
+        "https://images.unsplash.com/photo-1465847899084-d164df4dedc6?w=800",
     },
     {
-      title: "Ukulele Joy",
-      artist: "Royalty Free Studio",
-      src: "https://www.bensound.com/bensound-music/bensound-ukulele.mp3",
+      title: "Gentle Breeze",
+      artist: "SoundHelix",
+      category: "Acoustic",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
       cover:
-        "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800",
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+    },
+
+    // Electronic & Synthwave
+    {
+      title: "Cyber Pulse",
+      artist: "SoundHelix",
+      category: "Electronic",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+      cover: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800",
+    },
+    {
+      title: "Neon Drive",
+      artist: "SoundHelix",
+      category: "Electronic",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+      cover:
+        "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800",
+    },
+    {
+      title: "Digital Horizon",
+      artist: "SoundHelix",
+      category: "Electronic",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+      cover:
+        "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=800",
+    },
+
+    // Cinematic & Ambient
+    {
+      title: "Deep Ambient",
+      artist: "SoundHelix",
+      category: "Ambient",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
+      cover:
+        "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800",
+    },
+    {
+      title: "Space Drift",
+      artist: "SoundHelix",
+      category: "Ambient",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
+      cover:
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800",
+    },
+    {
+      title: "Atmospheric Echoes",
+      artist: "SoundHelix",
+      category: "Ambient",
+      src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
+      cover:
+        "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?w=800",
     },
   ];
 
