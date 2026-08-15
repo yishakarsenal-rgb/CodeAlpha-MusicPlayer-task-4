@@ -39,5 +39,4 @@ CodeAlpha_MusicPlayer/
 │   ├── SoundHelix-Song-7.mp3
 │   ├── SoundHelix-Song-8.mp3
 │   └── SoundHelix-Song-9.mp3
-├── index.html
 ```
