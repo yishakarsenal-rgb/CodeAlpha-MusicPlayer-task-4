@@ -23,12 +23,3 @@ A responsive, minimalist dark-themed web music player built with HTML, CSS, and 
 - JavaScript (ES6+): Audio playback logic, DOM updates, and event handling
 
 ---
-
-# Project Structure
-
-```text
-CodeAlpha_MusicPlayer/
-│
-├── audio/
-│   ├── SoundHelix-Song-1.mp3
-```
