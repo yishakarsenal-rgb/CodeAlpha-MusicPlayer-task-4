@@ -41,5 +41,4 @@ CodeAlpha_MusicPlayer/
 │   └── SoundHelix-Song-9.mp3
 ├── index.html
 ├── style.css
-└── script.js
 ```
