@@ -31,6 +31,5 @@ CodeAlpha_MusicPlayer/
 │
 ├── audio/
 │   ├── SoundHelix-Song-1.mp3
-│   ├── SoundHelix-Song-2.mp3
-│   ├── SoundHelix-Song-3.mp3
+│   ├── SoundHelix-Song-2.m
 ```
