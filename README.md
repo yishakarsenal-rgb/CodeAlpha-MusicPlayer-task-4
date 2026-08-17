@@ -2,8 +2,6 @@
 
 A responsive, minimalist dark-themed web music player built with HTML, CSS, and Vanilla JavaScript as part of my **CodeAlpha Frontend Development Internship**.
 
----
-
 # Features
 
 - Audio Controls: Full play, pause, next track, and previous track controls.
