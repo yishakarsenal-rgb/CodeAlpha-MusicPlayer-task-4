@@ -118,7 +118,6 @@ input[type="range"] {
   background-color: #cccccc;
 }
 
-/* Volume */
 .volume-container {
   display: flex;
   align-items: center;
