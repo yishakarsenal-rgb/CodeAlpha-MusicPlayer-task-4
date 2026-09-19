@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=300&q=70",
     },
 
-    // Electronic & Synthwave
     {
       title: "Cyber Pulse",
       artist: "Electronic",
