@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Local audio paths mapped to your exact downloaded filenames
   const songs = [
-    // Acoustic & Chill
     {
       title: "Acoustic Morning",
       artist: "Acoustic",
