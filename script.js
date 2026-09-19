@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=300&q=70",
     },
 
-    // Cinematic & Ambient
     {
       title: "Deep Ambient",
       artist: "Ambient",
